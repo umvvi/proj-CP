@@ -8,7 +8,7 @@
 <body>
     <?php
         //maak een virtual host aan. 1: start wamp op, 2:zoek op je browser "localhost", 3:ga naar de localhost van wamp,
-        //4:ga naar "add a virtual host", 5:noem de naam www.<onze naam>.com, 
+        //4:ga naar "add a virtual host", 5:noem de naam www.arss.local, 
         //6:maak in je schoolprojecten folders of waar je het ook hebt maak daar een map aan,
         //7:als je in visual studio code zit rechter muis klik op proj-CP map en klik dan op "copy path",
         //8:ga dan weer naar localhost en paste de "copy path" in de "absolute path" van localhost
