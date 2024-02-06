@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        include('')
+        include('confDatabase/conf.php');
     ?>
 </body>
 </html>
