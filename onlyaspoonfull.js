@@ -1,3 +1,4 @@
+/*lorm ipsum */
 function copyToClipboard() {
   // Select the text to copy
   var text = document.getElementById("textToCopy");
