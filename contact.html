@@ -10,7 +10,7 @@
 
 <body>
     <div class="eng-nl">
-        <p class="language"> english | nederlands </p>
+        <p class="language"> <a onclick="ChangeTextEnglish()" class="lang-txt">english</a> | <a onclick="ChangeTextDutch()" class="lang-txt">nederlands</a></p>
     </div>
     <nav class="fixed">
         <div class="row jc-space-between container">
@@ -23,39 +23,128 @@
             <div class="user-menu">
                 <ul>
 
-                    <li><a href=".html">Home</a></li>
-                    <li><a href=".html">Info & downloads</a></li>
-                    <li><a href=".html">Vragenlijst</a></li>
-                    <li><a href=".html">Doneer</a></li>
-                    <li><a href=".html">Contact</a></li>
+                    <li><a id="li-1" href=".html">Home</a></li>
+                    <li><a id="li-2" href=".html">Info & downloads</a></li>
+                    <li><a id="li-3" href="../KyanoDB">Questionaire</a></li>
+                    <li><a id="li-4" href=".html">Donate</a></li>
+                    <li><a id="li-5" href="contact.html">Contact</a></li>
                     <div class="field">
-                        <input class="field" placeholder="Search.." type="text">
+                        <input id="search" class="field" placeholder="Search.." type="text">
                         <img src="img/Search.png" class="search-icon"></img>
                     </div>
                 </ul>
             </div>
         </div>
     </nav>
-
+//luka was here
     <div class="header">
         <h1>Contact </h1>
     </div>
 
     <div class="form-cont">
-        <p class="easy-mail">Fill in this form for an easy email</p>
+        <p id="easy-mail" class="border">Fill in this form for an easy email</p>
         <div class="alert">
-            <p class="alert-p">If you have questions or want to contact a proffesional, you can do so here.<br>
-                 Is it urgent?<br> Contact us at <a href="contact.html">06 7892304939</a></p>
-
+            <p id="alert" class="alert-p">If you have questions or want to contact a proffesional, you can do so here.<br>
+                Is it urgent?<br> Contact us at: <a class="textToCopy" id="textToCopy phone" onclick="copyToClipboard()">06 92304939</a></p>
         </div>
 
         <div class="form">
-            <p>Enter your age: <input type="number" placeholder="age" name="" id="age"></p>
-            <p>What is your gender: <input type="text" placeholder="gender" name="" id="gender"></p>
-            
+            <p id="yourage">Your age: <input type="number" placeholder="age" name="" id="age"></p>
+            <p id="yourname">Your name: <input type="text" placeholder="name" name="" id="name"></p>
+            <p id="youremail">E-mail address: <input  type="text" placeholder="ex. example@email.com" name="" id="email"></p>
+            <p id="yournumber">Phone number: <input type="text" placeholder="ex. 06 12345678" name="" id="phone"></p>
+            <br>
+            <br>
+            <p id="entermessage">Enter your message in the field below:<br><input type="text" placeholder="" name="message" id="message"><button type="button">Submit</button></p>
         </div>
     </div>
 
-</body>
 
+    
+    
+    <div class="notification" id="notificationBox">Text copied</div>
+    
+    
+    
+    
+    <div class="location-contact-container">
+        <p Id="border" class="border">Location and Contact</p>
+        <div id="main">
+            <div class="loc-con-text">Callardlaan, 37 | utrecht</div>
+            <div class="loc-con-text">Postadres van ARSS</div>
+            <div onclick="copyToClipboard()" class="loc-con-text"><a id="textToCopy" href="https://www.gmail.com">evengenericeremail@gmail.com</a></div>
+            <div class="loc-con-text">ARSS</div>
+            <div class="loc-con-text">_____________</div>
+            <div class="loc-con-text">Postbus 08805</div>
+            <div onclick="copyToClipboard()" class="loc-con-text">Telefoon: <a class="textToCopy">+31 06 08542069</a></div>
+            <div class="loc-con-text">5040 HL Utrecht</div>
+        </div>
+    </div>
+    <div class="personal-container">
+        <p id="p-contact" class="border">Personal contact</p>
+        <div id="main">
+            <div class="personal-text">dr. Robert Stone</div>
+            <a id="textToCopy" onclick="copyToClipboard()" href="https://www.gmail.com"><div class="personal-text">genericemail@gmail.com</a></div>
+            <div class="personal-text">_____________</div>
+           <div onclick="copyToClipboard()" class="personal-text"><a class="textToCopy">+31 06 602838531</a></div>
+        </div>
+    </div>
+
+
+
+    <h3>Frequently Asked Questions</h3>
+<!-- <div id="q-cont">
+        <div class="question"></div>
+        
+            <h4>My joints fell apart what glue should i use? or is ductape more effective?</h4>
+            <p class="ANSWER"> In the case that your joints are falling apart effectively dislocating there are a few measures you can take to ensure not only your safety but your comfort as well.
+
+                <li class="q-li">glue. the most effective glue is super glue. this is by far most effective and comfortable.</li>
+                <li class="q-li">ductape is a very versatile but less comforting alternative to glue it is very effective but could cause some irritation.</li>
+                <li class="q-li">there are also alternatives such as a rope, nails, welding, a cast or cement although we do not advice using them.</li></p> 
+    </div> -->
+    <div id="q-cont" style="height: 155px;">
+        <div class="question">
+          <h4>My joints fell apart what glue should i use? or is ductape more effective?<button onclick="toggleExpand()">Expand</button></h4>
+          <p class="ANSWER">In the case that your joints are falling apart effectively dislocating there are a few measures you can take to ensure not only your safety but your comfort as well.
+            <ul>
+              <li>glue. the most effective glue is super glue. this is by far most effective and comfortable.</li>
+              <li>ductape is a very versatile but less comforting alternative to glue it is very effective but could cause some irritation.</li>
+              <li>there are also alternatives such as a rope, nails, welding, a cast or cement although we do not advice using them.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div id="q-cont2" style="height: 155px;">
+        <div class="question2">
+          <h4>Is it normal for my fingers and knees and elbows and arms to make a crackling noise?<button onclick="toggleExpand2()">Expand</button></h4>
+          <p class="ANSWER2">If you have arthritis it is completely normal for them to crackle, snap, whip, meow, and sometimes even talk(especially if you are elderly).<br>you do not have to worry. if it causes any pain or discomfort or if it starts flaking contact us and we will try to help you and if needed supply you with the right medicine
+            <ul>
+              <li>but why is this happening?</li>
+              <li>Arthritis occurs due to a combination of factors, including:</li>
+              <li>Genetics: Certain genetic traits can make a person more susceptible to arthritis.</li>
+              <li>Injury: Joint damage from a previous injury or overuse can contribute to the development of arthritis.</li>
+              <li>Abnormal Metabolism: Issues with the metabolism can lead to the development of gout and pseudogout.</li>
+              <li>Infections: Some infections can lead to the development of arthritis.</li>
+              <li>Immune System Dysfunction: The body's immune system can mistakenly attack the synovium (the lining of the membranes that surround the joints), leading to rheumatoid arthritis.</li>
+              <li>Age: The risk of developing many types of arthritis increases with age.</li>
+              <li>Lifestyle Factors: Factors such as excess weight, joint injuries, and occupations that involve repetitive motions can contribute to arthritis</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div id="q-cont3" style="height: 100px;">
+        <div class="question3">
+          <h4>I can’t find my glasses, could someone tell me where they are?<button onclick="toggleExpand3()">Expand</button></h4>
+          <p id="ANSWER3" class="ANSWER3">STOP FUCKING ASKING THIS, WE GET THAT YOU ARE OLD BUT WE DONT KNOW WHERE YOUR GODDAMN GLASSES ARE</p>
+        </div>
+      </div>
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+<script src="onlyaspoonfull.js"></script>
 </html>
